@@ -1,97 +1,108 @@
-# 🐼 Pandas pour auditeurs — de Excel au code
+# 🐼 Pandas for Auditors — from Excel to code
 
-Formation pratique à **pandas** (la bibliothèque Python de manipulation de données)
-destinée aux **auditeurs bancaires** à l'aise avec Excel mais non spécialistes de Python.
+A hands-on **pandas** course (the Python data-manipulation library) aimed at
+**banking auditors** who are comfortable with Excel but not Python specialists.
 
-Toutes les données sont **fictives et générées aléatoirement** dans les notebooks :
-vous pouvez tout exécuter et tout « casser » sans aucun risque.
+All data is **fictional and randomly generated** inside the notebooks: you can run
+everything and "break" anything without any risk.
 
 ---
 
-## 📚 Parcours recommandé
+## 📚 Recommended path
 
-| Étape | Notebook | Contenu |
+| Step | Notebook | Content |
 |---|---|---|
-| **1. Cours** | [`cours/cours_pandas_auditeurs.ipynb`](cours/cours_pandas_auditeurs.ipynb) | Théorie et exemples : `DataFrame`, lecture/écriture, filtres, tri, `groupby`, `pivot_table`, `merge`, dates, qualité des données, cas d'audit. Chaque notion est mise en regard de son **équivalent Excel**. |
-| **2. Exercices — Facile** | [`exercices/facile/`](exercices/facile/) | Premiers pas sur les opérations de guichet d'une agence. |
-| **3. Exercices — Moyen** | [`exercices/moyen/`](exercices/moyen/) | Revue d'un portefeuille de prêts immobiliers. |
-| **4. Exercices — Moyen+** | [`exercices/moyen_plus/`](exercices/moyen_plus/) | Audit LCB-FT de flux financiers. |
+| **1. Course** | [`course/pandas_for_auditors_course.ipynb`](course/pandas_for_auditors_course.ipynb) | Theory and examples: `DataFrame`, read/write, filtering, sorting, `groupby`, `pivot_table`, `merge`, dates, data quality, audit cases, Python lists, and PDF extraction with PyMuPDF. Every concept is mapped to its **Excel equivalent**. |
+| **2. Exercises — Easy** | [`exercises/easy/`](exercises/easy/) | First steps on a bank branch's counter operations. |
+| **3. Exercises — Medium** | [`exercises/medium/`](exercises/medium/) | Review of a real-estate loan portfolio. |
+| **4. Exercises — Medium+** | [`exercises/medium_plus/`](exercises/medium_plus/) | AML/CFT audit of financial flows. |
+| **5. Exercises — Lists & PDF** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Python lists and data extraction from a PDF report. |
 
-> 💡 Travaillez d'abord le cours, puis enchaînez les exercices dans l'ordre de difficulté.
+> 💡 Work through the course first, then tackle the exercises in order of difficulty.
 
 ---
 
-## 🗂️ Structure du dépôt
+## 🗂️ Repository structure
 
 ```
 training_junior/
 ├── README.md
-├── cours/
-│   └── cours_pandas_auditeurs.ipynb       # le cours (théorie + exemples)
-└── exercices/
-    ├── facile/
-    │   ├── exercice_facile.ipynb           # à compléter
-    │   └── solution_facile.ipynb           # corrigé
-    ├── moyen/
-    │   ├── exercice_moyen.ipynb
-    │   └── solution_moyen.ipynb
-    └── moyen_plus/
-        ├── exercice_moyen_plus.ipynb
-        └── solution_moyen_plus.ipynb
+├── course/
+│   └── pandas_for_auditors_course.ipynb     # the course (theory + examples)
+└── exercises/
+    ├── easy/
+    │   ├── exercise_easy.ipynb               # to complete
+    │   └── solution_easy.ipynb               # answer key
+    ├── medium/
+    │   ├── exercise_medium.ipynb
+    │   └── solution_medium.ipynb
+    ├── medium_plus/
+    │   ├── exercise_medium_plus.ipynb
+    │   └── solution_medium_plus.ipynb
+    └── pdf_and_lists/
+        ├── exercise_pdf_lists.ipynb
+        └── solution_pdf_lists.ipynb
 ```
 
-Pour chaque niveau :
-- le notebook **`exercice_*.ipynb`** contient les énoncés et des cellules à compléter (`# Votre code ici`) ;
-- le notebook **`solution_*.ipynb`** est identique mais avec les réponses.
+For each level:
+- the **`exercise_*.ipynb`** notebook holds the prompts and cells to complete (`# Your code here`);
+- the **`solution_*.ipynb`** notebook is identical but with the answers.
 
-Essayez toujours l'exercice **par vous-même** avant d'ouvrir la solution.
+Always try the exercise **on your own** before opening the solution.
 
 ---
 
-## 🎯 Les trois niveaux d'exercices
+## 🎯 The exercise levels
 
-Chaque niveau s'appuie sur un **jeu de données et un contexte d'audit différents**.
+Each level relies on a **different dataset and audit context**.
 
-### 🟢 Facile — Opérations de guichet d'une agence
-- **Contexte** : revue des opérations en face-à-face d'une agence (retraits, dépôts, conseils…).
-- **Compétences** : `head` / `info` / `describe`, sélection de colonnes, filtrage simple,
-  tri, `value_counts`, `groupby` à un niveau.
+### 🟢 Easy — Bank branch counter operations
+- **Context**: review of a branch's face-to-face operations (withdrawals, deposits, advisory…).
+- **Skills**: `head` / `info` / `describe`, column selection, simple filtering,
+  sorting, `value_counts`, single-level `groupby`.
 
-### 🟠 Moyen — Portefeuille de prêts immobiliers
-- **Contexte** : analyse des échéances de prêts, retards de paiement et impayés par agence.
-- **Compétences** : filtrage multi-conditions (`&`, `|`, `~`, `.isin()`, `.between()`),
-  colonnes calculées (`np.where`, `np.select`), `groupby` + `.agg()`, `pivot_table`,
-  qualité des données (valeurs manquantes, doublons).
+### 🟠 Medium — Real-estate loan portfolio
+- **Context**: analysis of loan installments, payment delays, and unpaid amounts per branch.
+- **Skills**: multi-condition filtering (`&`, `|`, `~`, `.isin()`, `.between()`),
+  computed columns (`np.where`, `np.select`), `groupby` + `.agg()`, `pivot_table`,
+  data quality (missing values, duplicates).
 
-### 🔵 Moyen+ — Audit LCB-FT de flux financiers
-- **Contexte** : conformité / lutte anti-blanchiment — enrichissement clients, détection de
-  comportements atypiques, scoring de risque.
-- **Compétences** : `merge` (≈ `RECHERCHEV`), analyse temporelle (`.dt`), détection de
-  *structuring*, flux en espèces, pays à risque, scoring multi-critères et export Excel.
+### 🔵 Medium+ — AML/CFT audit of financial flows
+- **Context**: compliance / anti-money-laundering — client enrichment, detection of
+  atypical behavior, risk scoring.
+- **Skills**: `merge` (≈ `VLOOKUP`), time analysis (`.dt`), structuring detection,
+  cash flows, high-risk countries, multi-criteria scoring, and Excel export.
 
-> ℹ️ Les critères d'alerte (seuils, listes de pays…) sont **simplifiés à des fins pédagogiques**
-> et ne constituent pas une méthodologie de contrôle réelle.
+### 🟣 Lists & PDF — Extraction from a surveillance report
+- **Context**: parsing a quarterly AML/CFT PDF report to rebuild a structured table.
+- **Skills**: Python lists (slicing, methods, comprehensions), reading a PDF with
+  **PyMuPDF** (`fitz`), extracting dates and countries with regular expressions (`re`),
+  and rebuilding a DataFrame.
+
+> ℹ️ The alert criteria (thresholds, country lists…) are **simplified for teaching purposes**
+> and do not constitute a real control methodology.
 
 ---
 
-## ⚙️ Prérequis & installation
+## ⚙️ Requirements & installation
 
-Vous avez besoin de **Python 3** et de quelques bibliothèques :
-
-```bash
-pip install pandas numpy openpyxl jupyter
-```
-
-- **pandas** / **numpy** : manipulation des données et génération des jeux de démonstration.
-- **openpyxl** : nécessaire pour lire/écrire les fichiers Excel (`read_excel`, `to_excel`).
-- **jupyter** : pour ouvrir et exécuter les notebooks.
-
-### Lancer les notebooks
+You need **Python 3** and a few libraries:
 
 ```bash
-jupyter notebook        # ou : jupyter lab
+pip install pandas numpy openpyxl pymupdf jupyter
 ```
 
-Puis ouvrez le notebook souhaité et exécutez les cellules **dans l'ordre, de haut en bas**
-(`Maj` + `Entrée`). La première cellule de chaque notebook d'exercice **génère les données** :
-exécutez-la avant tout.
+- **pandas** / **numpy**: data manipulation and generation of the demo datasets.
+- **openpyxl**: required to read/write Excel files (`read_excel`, `to_excel`).
+- **pymupdf**: required for the Lists & PDF exercise (imported as `fitz`).
+- **jupyter**: to open and run the notebooks.
+
+### Running the notebooks
+
+```bash
+jupyter notebook        # or: jupyter lab
+```
+
+Then open the notebook you want and run the cells **in order, top to bottom**
+(`Shift` + `Enter`). The first cell of each exercise notebook **generates the data**:
+run it before anything else.
