@@ -3,6 +3,10 @@
 *.csv
 *.xlsx
 
+# ...but keep input assets used by the exercises
+!assets/
+!assets/*.pdf
+
 # Jupyter / Python
 .ipynb_checkpoints/
 __pycache__/

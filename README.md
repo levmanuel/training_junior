@@ -18,7 +18,7 @@ everything and "break" anything without any risk.
 | **4. Exercises — Beginner** | [`exercises/beginner/`](exercises/beginner/) | First steps on a bank branch's counter operations. |
 | **5. Exercises — Intermediate** | [`exercises/intermediate/`](exercises/intermediate/) | Review of a real-estate loan portfolio. |
 | **6. Exercises — Advanced** | [`exercises/advanced/`](exercises/advanced/) | AML/CFT audit of financial flows. |
-| **7. Exercises — Lists & PDF** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Python lists and data extraction from a PDF report. |
+| **7. Exercises — PDF extraction** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Extract key fields from a real PRIIPS KID PDF (in `assets/`) into a review table. |
 
 > 💡 New to Python? Start with the fundamentals course, then the pandas course, then tackle the exercises in order of difficulty.
 
@@ -29,6 +29,7 @@ everything and "break" anything without any risk.
 ```
 training_junior/
 ├── README.md
+├── assets/                                  # input files used by the exercises (e.g. a PRIIPS KID PDF)
 ├── course/
 │   ├── python_fundamentals_course.ipynb     # Python basics (start here)
 │   └── pandas_for_auditors_course.ipynb     # the pandas course (theory + examples)
