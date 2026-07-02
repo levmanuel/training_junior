@@ -13,9 +13,9 @@ everything and "break" anything without any risk.
 | Step | Notebook | Content |
 |---|---|---|
 | **1. Course** | [`course/pandas_for_auditors_course.ipynb`](course/pandas_for_auditors_course.ipynb) | Theory and examples: `DataFrame`, read/write, filtering, sorting, `groupby`, `pivot_table`, `merge`, dates, data quality, audit cases, Python lists, and PDF extraction with PyMuPDF. Every concept is mapped to its **Excel equivalent**. |
-| **2. Exercises — Easy** | [`exercises/easy/`](exercises/easy/) | First steps on a bank branch's counter operations. |
-| **3. Exercises — Medium** | [`exercises/medium/`](exercises/medium/) | Review of a real-estate loan portfolio. |
-| **4. Exercises — Medium+** | [`exercises/medium_plus/`](exercises/medium_plus/) | AML/CFT audit of financial flows. |
+| **2. Exercises — Beginner** | [`exercises/easy/`](exercises/easy/) | First steps on a bank branch's counter operations. |
+| **3. Exercises — Intermediate** | [`exercises/medium/`](exercises/medium/) | Review of a real-estate loan portfolio. |
+| **4. Exercises — Advanced** | [`exercises/medium_plus/`](exercises/medium_plus/) | AML/CFT audit of financial flows. |
 | **5. Exercises — Lists & PDF** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Python lists and data extraction from a PDF report. |
 
 > 💡 Work through the course first, then tackle the exercises in order of difficulty.
@@ -56,18 +56,18 @@ Always try the exercise **on your own** before opening the solution.
 
 Each level relies on a **different dataset and audit context**.
 
-### 🟢 Easy — Bank branch counter operations
+### 🟢 Beginner — Bank branch counter operations
 - **Context**: review of a branch's face-to-face operations (withdrawals, deposits, advisory…).
 - **Skills**: `head` / `info` / `describe`, column selection, simple filtering,
   sorting, `value_counts`, single-level `groupby`.
 
-### 🟠 Medium — Real-estate loan portfolio
+### 🟠 Intermediate — Real-estate loan portfolio
 - **Context**: analysis of loan installments, payment delays, and unpaid amounts per branch.
 - **Skills**: multi-condition filtering (`&`, `|`, `~`, `.isin()`, `.between()`),
   computed columns (`np.where`, `np.select`), `groupby` + `.agg()`, `pivot_table`,
   data quality (missing values, duplicates).
 
-### 🔵 Medium+ — AML/CFT audit of financial flows
+### 🔵 Advanced — AML/CFT audit of financial flows
 - **Context**: compliance / anti-money-laundering — client enrichment, detection of
   atypical behavior, risk scoring.
 - **Skills**: `merge` (≈ `VLOOKUP`), time analysis (`.dt`), structuring detection,
