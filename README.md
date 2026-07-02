@@ -12,13 +12,14 @@ everything and "break" anything without any risk.
 
 | Step | Notebook | Content |
 |---|---|---|
-| **1. Course** | [`course/pandas_for_auditors_course.ipynb`](course/pandas_for_auditors_course.ipynb) | Theory and examples: `DataFrame`, read/write, filtering, sorting, `groupby`, `pivot_table`, `merge`, dates, data quality, audit cases, Python lists, and PDF extraction with PyMuPDF. Every concept is mapped to its **Excel equivalent**. |
-| **2. Exercises — Beginner** | [`exercises/beginner/`](exercises/beginner/) | First steps on a bank branch's counter operations. |
-| **3. Exercises — Intermediate** | [`exercises/intermediate/`](exercises/intermediate/) | Review of a real-estate loan portfolio. |
-| **4. Exercises — Advanced** | [`exercises/advanced/`](exercises/advanced/) | AML/CFT audit of financial flows. |
-| **5. Exercises — Lists & PDF** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Python lists and data extraction from a PDF report. |
+| **1. Python fundamentals** | [`course/python_fundamentals_course.ipynb`](course/python_fundamentals_course.ipynb) | The essential Python building blocks: variables & types, strings/f-strings, lists, dictionaries, tuples, booleans & comparisons, conditions, loops, functions, imports, reading errors. Start here if you have never written Python. |
+| **2. Pandas course** | [`course/pandas_for_auditors_course.ipynb`](course/pandas_for_auditors_course.ipynb) | Theory and examples: `DataFrame`, read/write, filtering, sorting, `groupby`, `pivot_table`, `merge`, dates, data quality, audit cases, and PDF extraction with PyMuPDF. Every concept is mapped to its **Excel equivalent**. |
+| **3. Exercises — Beginner** | [`exercises/beginner/`](exercises/beginner/) | First steps on a bank branch's counter operations. |
+| **4. Exercises — Intermediate** | [`exercises/intermediate/`](exercises/intermediate/) | Review of a real-estate loan portfolio. |
+| **5. Exercises — Advanced** | [`exercises/advanced/`](exercises/advanced/) | AML/CFT audit of financial flows. |
+| **6. Exercises — Lists & PDF** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Python lists and data extraction from a PDF report. |
 
-> 💡 Work through the course first, then tackle the exercises in order of difficulty.
+> 💡 New to Python? Start with the fundamentals course, then the pandas course, then tackle the exercises in order of difficulty.
 
 ---
 
@@ -28,7 +29,8 @@ everything and "break" anything without any risk.
 training_junior/
 ├── README.md
 ├── course/
-│   └── pandas_for_auditors_course.ipynb     # the course (theory + examples)
+│   ├── python_fundamentals_course.ipynb     # Python basics (start here)
+│   └── pandas_for_auditors_course.ipynb     # the pandas course (theory + examples)
 └── exercises/
     ├── beginner/
     │   ├── exercise_beginner.ipynb           # to complete
