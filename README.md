@@ -63,6 +63,13 @@ Always try the exercise **on your own** before opening the solution.
 
 Each level relies on a **different dataset and audit context**.
 
+### ⚪ Fundamentals — Python basics
+- **Context**: no dataset — short, self-contained tasks in plain Python.
+- **Skills**: variables & types, strings/f-strings, lists, dictionaries, tuples,
+  booleans & comparisons, conditions, loops, and functions (plus a small synthesis exercise).
+- **Prerequisite for**: everything below. Pair it with the
+  [`python_fundamentals_course.ipynb`](course/python_fundamentals_course.ipynb) course.
+
 ### 🟢 Beginner — Bank branch counter operations
 - **Context**: review of a branch's face-to-face operations (withdrawals, deposits, advisory…).
 - **Skills**: `head` / `info` / `describe`, column selection, simple filtering,
@@ -80,11 +87,12 @@ Each level relies on a **different dataset and audit context**.
 - **Skills**: `merge` (≈ `VLOOKUP`), time analysis (`.dt`), structuring detection,
   cash flows, high-risk countries, multi-criteria scoring, and Excel export.
 
-### 🟣 Lists & PDF — Extraction from a surveillance report
-- **Context**: parsing a quarterly AML/CFT PDF report to rebuild a structured table.
-- **Skills**: Python lists (slicing, methods, comprehensions), reading a PDF with
-  **PyMuPDF** (`fitz`), extracting dates and countries with regular expressions (`re`),
-  and rebuilding a DataFrame.
+### 🟣 PDF extraction — PRIIPS Key Information Document
+- **Context**: extracting key fields from a real regulatory **PRIIPS KID** PDF stored in `assets/`.
+- **Skills**: filtering file names (load only files whose name contains `priips`), reading a PDF with
+  **PyMuPDF** (`fitz`), extracting fields (ISIN, currency, publication date, risk indicator,
+  recommended holding period) with regular expressions (`re`), and building a DataFrame via a
+  reusable `extract_kid()` function.
 
 > ℹ️ The alert criteria (thresholds, country lists…) are **simplified for teaching purposes**
 > and do not constitute a real control methodology.
@@ -101,7 +109,7 @@ pip install pandas numpy openpyxl pymupdf jupyter
 
 - **pandas** / **numpy**: data manipulation and generation of the demo datasets.
 - **openpyxl**: required to read/write Excel files (`read_excel`, `to_excel`).
-- **pymupdf**: required for the Lists & PDF exercise (imported as `fitz`).
+- **pymupdf**: required for the PDF extraction exercise (imported as `fitz`).
 - **jupyter**: to open and run the notebooks.
 
 ### Running the notebooks
