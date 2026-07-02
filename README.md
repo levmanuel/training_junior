@@ -13,9 +13,9 @@ everything and "break" anything without any risk.
 | Step | Notebook | Content |
 |---|---|---|
 | **1. Course** | [`course/pandas_for_auditors_course.ipynb`](course/pandas_for_auditors_course.ipynb) | Theory and examples: `DataFrame`, read/write, filtering, sorting, `groupby`, `pivot_table`, `merge`, dates, data quality, audit cases, Python lists, and PDF extraction with PyMuPDF. Every concept is mapped to its **Excel equivalent**. |
-| **2. Exercises — Beginner** | [`exercises/easy/`](exercises/easy/) | First steps on a bank branch's counter operations. |
-| **3. Exercises — Intermediate** | [`exercises/medium/`](exercises/medium/) | Review of a real-estate loan portfolio. |
-| **4. Exercises — Advanced** | [`exercises/medium_plus/`](exercises/medium_plus/) | AML/CFT audit of financial flows. |
+| **2. Exercises — Beginner** | [`exercises/beginner/`](exercises/beginner/) | First steps on a bank branch's counter operations. |
+| **3. Exercises — Intermediate** | [`exercises/intermediate/`](exercises/intermediate/) | Review of a real-estate loan portfolio. |
+| **4. Exercises — Advanced** | [`exercises/advanced/`](exercises/advanced/) | AML/CFT audit of financial flows. |
 | **5. Exercises — Lists & PDF** | [`exercises/pdf_and_lists/`](exercises/pdf_and_lists/) | Python lists and data extraction from a PDF report. |
 
 > 💡 Work through the course first, then tackle the exercises in order of difficulty.
@@ -30,15 +30,15 @@ training_junior/
 ├── course/
 │   └── pandas_for_auditors_course.ipynb     # the course (theory + examples)
 └── exercises/
-    ├── easy/
-    │   ├── exercise_easy.ipynb               # to complete
-    │   └── solution_easy.ipynb               # answer key
-    ├── medium/
-    │   ├── exercise_medium.ipynb
-    │   └── solution_medium.ipynb
-    ├── medium_plus/
-    │   ├── exercise_medium_plus.ipynb
-    │   └── solution_medium_plus.ipynb
+    ├── beginner/
+    │   ├── exercise_beginner.ipynb           # to complete
+    │   └── solution_beginner.ipynb           # answer key
+    ├── intermediate/
+    │   ├── exercise_intermediate.ipynb
+    │   └── solution_intermediate.ipynb
+    ├── advanced/
+    │   ├── exercise_advanced.ipynb
+    │   └── solution_advanced.ipynb
     └── pdf_and_lists/
         ├── exercise_pdf_lists.ipynb
         └── solution_pdf_lists.ipynb
